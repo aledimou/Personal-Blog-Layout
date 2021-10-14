@@ -37,11 +37,11 @@
 nav ul {
   display: flex;
   justify-content: center;
-
   list-style-type: none;
 }
 
 nav li a {
+  justify-content: space-between;
   text-decoration: none;
   margin: 5px;
   color: #707070;
@@ -51,4 +51,21 @@ a:hover,
 a:focus {
   border-bottom: 2px solid #1792d2;
   color: #1792d2;
+}
+
+@media screen and (max-width: 675px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li {
+    text-align: center;
+    margin: 10px;
+  }
 }
