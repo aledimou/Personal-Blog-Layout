@@ -13,7 +13,7 @@ header {
   background-color: #f8f8f8;
 }
 
-.wrapper {
+.nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -148,6 +148,8 @@ main {
 /* Aside */
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   width: 20%;
   margin: 20px 30px;
 }
@@ -156,19 +158,19 @@ main {
   color: #143774;
   font-family: "Ubuntu Light", serif;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.2rem;
   letter-spacing: 3.6px;
 }
 
 .widget-body {
   font-family: "Ubuntu Light", serif;
-  font-size: 14px;
+  font-size: 1rem;
   color: #143774;
 }
 
 .widget-recent-title {
   font-family: "Ubuntu", serif;
-  font-size: 16px;
+  font-size: 1.05rem;
   color: #143774;
   margin: 10px 0;
   font-weight: 600;
@@ -182,6 +184,7 @@ main {
 
 .side-widget-featured {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -193,6 +196,7 @@ main {
 .side-widget-recent {
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -218,7 +222,7 @@ footer {
 }
 
 @media screen and (max-width: 675px) {
-  .wrapper {
+  .nav-container {
     display: flex;
     flex-direction: column;
   }
@@ -231,6 +235,11 @@ footer {
   nav li {
     text-align: center;
     margin: 10px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
   }
 
   .recent {
@@ -251,5 +260,22 @@ footer {
     width: auto;
     height: auto;
     margin: 15px 0px 15px 0;
+  }
+
+  .sidebar {
+    width: auto;
+  }
+
+  .widget-recent {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .widget-img {
+    width: 90%;
   }
 }
